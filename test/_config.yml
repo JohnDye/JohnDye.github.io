@@ -1,0 +1,95 @@
+name: Bridgeway Church | Alpharetta, Georgia
+description: Our vision is a combination of the greatest commandment (to love the Lord with all your heart, soul, strength, and mind), the second greatest commandment (to love your neighbor as yourself), and the great commission (to make disciples of all nations). Worshipping God. Loving others. Influencing the world... one person at a time.
+url: https://bridgeway.net
+
+timezone: US/Eastern
+
+twitter:
+  username: BridgewayGA
+
+facebook:
+  publisher: BridgewayChurchGeorgia
+
+logo: /assets/img/logos/Bridgeway_Primary.svg
+
+social:
+  name: Bridgeway Church
+  links:
+    - https://www.facebook.com/BridgewayChurchGeorgia/
+    - https://twitter.com/BridgewayGA
+    - http://vimeo.com/bridgewayga
+
+# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:  _plugins
+layouts_dir:  _layouts
+data_dir:     _data
+includes_dir: _includes
+collections:
+  posts:
+    output:   true
+
+# Handling Reading
+safe:         false
+include:      []
+exclude:      ["node_modules", "vendor/bundle/", "vendor/cache/", "vendor/gems/", "vendor/ruby/", "Gruntfile.js", "package.json", "npm-debug.log", "README.md", "Gemfile", "CNAME"]
+keep_files:   [".git"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Filtering Content
+show_drafts: null
+limit_posts: 0
+future:      false
+unpublished: false
+
+# Plugins
+whitelist: []
+gems:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+# Conversion
+markdown:    kramdown
+highlighter: rouge
+lsi:         false
+excerpt_separator: "\n\n"
+incremental: false
+
+# Serving
+detach:  false
+port:    4000
+host:    127.0.0.1
+baseurl: "" # does not include hostname
+show_dir_listing: false
+
+# Outputting
+permalink:     date
+paginate_path: /page:num
+
+quiet:    false
+verbose:  false
+defaults: []
+
+liquid:
+  error_mode: warn
+
+# Markdown Processors
+rdiscount:
+  extensions: []
+
+redcarpet:
+  extensions: []
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  input:          GFM
+  hard_wrap:      false
+  footnote_nr:    1

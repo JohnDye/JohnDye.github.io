@@ -1,0 +1,86 @@
+---
+
+layout: default
+title: Discovering Christianity
+permalink: discovering-christianity
+redirect_from: "/resources/sermon-series/discoveringchristianity/"
+description: Discovery is the captivating process of finding something never before seen, of overcoming barriers that prevented entry, or solving what previously was not understood. Religion can seem a bit beyond us, hidden by barriers, and clouded by the unknown. It begs asking the question, have you Discovered Christianity? If you want to know what it is all about then we would love for you to join us for our Discovering Christianity sermon series starting Sunday April 23 at 9:30 AM.
+image:
+ twitter: &image assets/img/discovering-christianity-sharable.png
+ facebook: *image
+
+---
+<div class="section section-header section-header-about">
+    <div class="parallax filter filter-color-primary">
+        <div class="image" style="background-image:url('/assets/img/discovering-christianity-background.png')">
+        </div>
+        <div class="container">
+            <div class="content">
+                <p>
+	                <img alt="Discovering Christianity Logo" src="{{ site.baseurl }}/assets/img/discovering-christianity.svg" class="img-rounded" style="max-width:320px;"><br><br>
+                </p>
+                <h3 class="subtitle">A Nine Week Journey Through the Bible</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="title-area">
+            <h2>Come Discover Christianity!</h2>
+            <div class="separator separator-danger">✻</div>
+        </div>
+        <div class="description">
+
+            <p>Discovery is the captivating process of finding something never before seen, of overcoming barriers that prevented entry, or solving what previously was not understood. Religion can seem a bit beyond us, hidden by barriers, and clouded by the unknown. It begs asking the question, have you Discovered Christianity? If you want to know what it is all about then we would love for you to join us for our Discovering Christianity sermon series starting Sunday April 23 at 9:30 AM.</p>
+
+            <p>Christianity may be totally new to you and we would love to have you come explore the faith for the first time. For others Christianity is hidden in plain sight. It is all around and familiar but vaguely understood, and this means discovering Christianity involves removing the clutter that has long obscured it. If you already have some knowledge of the faith but want to better comprehend it we would love to have you too.</p>
+
+            <p>During this 9 Week sermon series we will walk through the basic storyline of the Bible and study the main events and people of the Christian faith. We will read the Bible, hear a brief teaching, and then discuss it. We will also have small groups in which you can ask any question you want and hear questions that other people have.</p>
+
+            <p>Some of the topics we will cover are: Who is God? What’s wrong with the world? What’s my purpose in life? Who was Jesus? Did the resurrection really happen? Is heaven for real?</p>
+
+            <p>If you are looking for a way to discover more about the faith or perhaps rediscover your faith we invite you to come. We want to be a warm welcoming church that allows people of all backgrounds and faiths to come learn about Christianity in a safe and loving environment.</p>
+
+        </div>
+
+		<div class="row">
+            {% assign sermonposts = site.posts | where: "sermon-series", "Discovering Christianity" %}
+            {% for post in sermonposts reversed %}
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+
+                <div class="card card-blog">
+                    <a href="{{ post.url }}">
+
+                        <img src="{{ site.baseurl }}{{ post.image.blog }}" class="header image-header">
+                        <div class="content">
+
+                            <div class="circle-black">
+                                <div class="circle">
+                                    <div class="date-wrapper">
+                                        <span class="month">{{ post.date | date: "%b" }}</span>
+                                        <span class="date">{{ post.date | date: "%d" }}</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="card-title">{{ post.title }}</h3>
+                            <h6 class="card-category text-warning">{{ post.subtitle }}</h6>
+                            <p class="text-description text-gray">{{ post.excerpt | strip_html }}</p>
+                        </div>
+
+                        <div class="tags" style="padding-top: 10px;">
+                            {% for tag in post.tags %}<span class="label label-fill label-danger"><i class="fa fa-tag"></i> {{ tag }}</span> {% endfor %}
+                        </div>
+
+                    </a>
+                </div>
+
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
